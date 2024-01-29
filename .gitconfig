@@ -1,0 +1,18 @@
+[user]
+	name = AndrewBennettDev
+	email = andrewbennettdev@gmail.com
+[init]
+  defaultBranch = main
+[pull]
+  rebase = true
+[core]
+  editor = vim
+  browser = brave-browser
+[web]
+  browser = brave-browser
+[alias]
+  done = "!git add . && git commit -m 'checkpoint commit'"
+  lg = log --pretty=\"format:%h %s\" --graph
+  st = status -s
+  ghinit = "!git init && git add . && git commit -m 'initial commit' && git branch -m main && git remote add origin %1 && git push -u -f origin main"
+  alias = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
